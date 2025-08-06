@@ -1,26 +1,23 @@
-# MBR Ransomware (Em Desenvolvimento)
+# 🧨 MBR Ransomware (Protótipo em Desenvolvimento)
 
-> ⚠️ **Aviso Legal**: Este projeto é estritamente para fins educacionais e de pesquisa em segurança da informação. Não deve, em hipótese alguma, ser usado para fins maliciosos ou sem o consentimento explícito do proprietário do sistema alvo. O uso indevido pode violar leis locais e internacionais.
-
----
-
-## 📌 Sobre o Projeto
-
-Este é um projeto experimental de um **ransomware baseado em MBR (Master Boot Record)**, com foco no estudo de técnicas de infecção de baixo nível e manipulação do processo de boot de sistemas operacionais. Ele visa demonstrar como um payload pode substituir o MBR original para alterar o comportamento do boot e exibir mensagens personalizadas ao usuário.
-
-**⚠️ Importante:** O projeto ainda está em fase inicial de desenvolvimento e **não está funcional** no momento.
+> ⚠️ **Aviso Legal Importante**:  
+> Este projeto é estritamente para **fins educacionais e de pesquisa em segurança da informação**. O uso deste código fora de ambientes controlados, sem autorização explícita do proprietário da máquina, pode ser **crime** conforme legislações locais e internacionais. O autor **não se responsabiliza** por qualquer uso indevido.
 
 ---
 
-## 🚧 Status do Desenvolvimento
+## 📌 Descrição
 
-- ✅ Estrutura base do projeto
-- ✅ Escrita parcial de payload para sobrescrever o MBR
-- 🔜 Desenvolvimento do **bootloader customizado** que será injetado no MBR
-- 🔜 Implementação de mensagens e lógica de bloqueio na inicialização
-- 🔜 Documentação técnica e explicações detalhadas sobre cada etapa
+Este é um projeto experimental de um **ransomware que sobrescreve o MBR (Master Boot Record)** de um disco físico.  
+O código atual realiza as seguintes etapas:
 
----
+1. Abre o **disco físico 0** (`PhysicalDrive0`) com permissões de leitura e escrita.
+2. Faz backup do setor MBR original (512 bytes).
+3. Verifica a **assinatura do MBR** (0x55AA nos últimos 2 bytes).
+4. Cria um buffer de 512 bytes com o caractere `'R'` e sobrescreve o MBR com esse conteúdo.
+5. Em seguida, **restaura o MBR original** (talvez como teste ou placeholder).
+6. Eleva privilégios e **dispara uma tela azul da morte (BSOD)** usando `NtRaiseHardError`.
 
-## 📁 Estrutura do Projeto (prevista)
+> 💡 *Atualmente, o código ainda não injeta um bootloader funcional. Isso será implementado nas próximas etapas.*
+
+
 
