@@ -101,7 +101,7 @@ mensagemErro: db 'Voce errou! Por isso nao passara!', 0x00
 tamanhoMensagemErro: db ($ - mensagemErro)
 mensagemParabens: db 'Muito bom! Voce passou! =D', 0x00
 tamanhoMensagemParabens: db ($ - mensagemParabens)
-senha: db 'Rafael!'
+senha: db 'Davi!'
 tamanhoSenha: dw ($ - senha)
 
 times 510 - ($ - $$) db 0x00
