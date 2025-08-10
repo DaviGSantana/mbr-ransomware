@@ -59,3 +59,5 @@ O código atual realiza as seguintes etapas:
 - `bootloader.asm` — Código Assembly do bootloader que será gravado no MBR e setor 2.  
 
 ---
+<img width="809" height="442" alt="image" src="https://github.com/user-attachments/assets/a19a3ed5-483e-4281-b087-49ccd0f317c8" />
+
