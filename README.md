@@ -1,4 +1,4 @@
-# 🧨 MBR Ransomware (Protótipo em Desenvolvimento) - falta criptografia
+# 🧨 MBR Ransomware (Protótipo em Desenvolvimento) 
 
 > ⚠️ **Aviso Legal Importante**:  
 > Este projeto é estritamente para **fins educacionais e de pesquisa em segurança da informação**.  
